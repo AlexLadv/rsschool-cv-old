@@ -391,3 +391,52 @@ a {
   background-color: rgb(255, 255, 255);
 }
 /* ------- Burger styles end -------- */
+
+
+/* ------- Media styles start -------- */
+@media (max-width: 600px) {
+  .about {
+    display: block;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .img {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .about__descr {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .about__title {
+    max-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .footer__container {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .footer__copy {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .footer__list {
+    width: 100%;
+  }
+}
+/* ------- Media styles end -------- */
