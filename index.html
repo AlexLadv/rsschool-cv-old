@@ -13,7 +13,7 @@
     <header class="header">
       <div class="container nav__container">
         <nav class="nav">
-          <ul class="nav__list list-reset">
+          <ul class="nav__list list-reset" data-menu>
             <li class="nav__item">
               <a class="nav__link link-anim" href="#about">About me</a>
             </li>
@@ -34,6 +34,9 @@
             </li>            
           </ul>
         </nav>
+        <button class="burger header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+          <span class="burger__line"></span>
+        </button>
       </div>
     </header>
     <main class="main">
@@ -128,5 +131,6 @@
       </div>
     </footer>
   </div>
+  <script src="./index.js"></script>
 </body>
 </html>
