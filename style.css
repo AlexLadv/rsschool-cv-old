@@ -21,7 +21,7 @@
   flex: 1 1 auto;
 }
 
-.page__body {
+.page-body {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
@@ -92,25 +92,71 @@ a {
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 30px;
+  color: rgb(242, 242, 242);
+  background-color: rgb(31, 30, 30);
+}
+
 
 /* ------- Header styles start -------- */
-.nav__container {
-  margin-top: 30px;
-  margin-bottom: 50px;  
+.nav{
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .nav{
+    padding-top: 0px;
+  }  
 }
 .nav__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .nav__list {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 5;
+    transform: translateY(-200%);
+    transition: transform 0.5s ease-in-out;
+    padding: 30px 0;
+  }    
+}
+.menu--active {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
 .nav__item:not(:last-child) {  
   margin-right: 15px;
+}
+@media (max-width: 768px) {
+  .nav__item:not(:last-child) {  
+    margin-right: 0px;
+  }
 }
 .nav__link {  
   padding: 0 5px;
   font-weight: 700;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
+}
+@media (max-width: 768px) {
+  .nav__link {
+    color: rgb(242, 242, 242);
+  }    
 }
 /* -------- Header styles end -------- */
 
@@ -154,19 +200,6 @@ a {
   margin-right: 50px;
 }
 /* ------- Section About styles end -------- */
-
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding: 30px;
-  color: rgb(242, 242, 242);
-  background-color: rgb(31, 30, 30);
-}
 
 
 
@@ -239,9 +272,10 @@ a {
   margin-bottom: 20px;
 }
 .code {
-  line-height: 0.9;
+  line-height: 2;
 }
 .pre {
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 /* ------- Section Code styles end -------- */
@@ -287,3 +321,122 @@ a {
 }
 /* ------- Footer styles start -------- */
 
+
+/* ------- Burger styles start -------- */
+
+.burger {
+  --burger-width:23px;
+  --burger-height: 19px;
+  --burger-line-height: 3px;
+
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  cursor: pointer;  
+}
+.header__burger {
+  margin-left: auto;
+  display: block;
+  z-index: 50;
+  transform: translate(-20px, -15px);
+}
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;    
+  }
+}
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+.burger::before {
+  top: 0;
+}
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+}
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+.burger--active .burger__line{
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;    
+}
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}
+/* ------- Burger styles end -------- */
+
+
+/* ------- Media styles start -------- */
+@media (max-width: 600px) {
+  .about {
+    display: block;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .img {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .about__descr {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .about__title {
+    max-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .footer__container {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .footer__copy {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .footer__list {
+    width: 100%;
+  }
+}
+/* ------- Media styles end -------- */
