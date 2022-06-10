@@ -239,9 +239,10 @@ a {
   margin-bottom: 20px;
 }
 .code {
-  line-height: 0.9;
+  line-height: 2;
 }
 .pre {
+  padding: 15px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 /* ------- Section Code styles end -------- */
