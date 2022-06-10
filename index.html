@@ -1,12 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>CV Alex Ladv - Junior Front-End Developer</title>
+  <link rel="icon" href="./assets/icon/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML, CSS & Git Basics</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <p>HTML, CSS & Git Basics</p>
+<body class="page-body">
+  <div class="site-container">
+    <header class="header">
+      <div class="container nav__container">
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a class="nav__link link-anim" href="#about">About me</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-anim" href="#footer">Contacts</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-anim" href="#skills">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-anim" href="#courses">Education and courses</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-anim" href="#code">Code Example</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link-anim" href="#language">Language</a>
+            </li>            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container main__container">
+        <section class="section about" id="about">
+          <img class="img" src="./assets/img/my_avatar.jpg" alt="foto Alex Ladv" width="166" height="144">
+          <div class="about__descr">
+            <h1 class="about__title">Alex <span>Ladv</span></h1>
+            <p class="about__major">Junior Front-End Developer</p>
+            <p class="about__text">
+              My aspiration to get the Profession of Frontend Developer. I keep learning and I think that nothing is impossible. That is why I`m here.
+            </p>
+          </div>
+        </section>
+        <div class="grid-container">
+          <section class="section contacts" id="contacts">
+            <h2 class="contacts__title title">Contacts</h2>
+            <ul class="contacts__list list-reset">
+              <li class="contacts__item contacts__item--tel">Tel:
+                <a class="contacts__link" href="tel:+79650412604">+7-965-041-26-04</a>
+              </li>
+              <li class="contacts__item contacts__item--email">Email:
+                <a class="contacts__link" href="mailto:cuba-1@mail.ru">cuba-1@mail.ru</a>
+              </li>            
+              <li class="contacts__item contacts__item--gh">GitHub: 
+                <a class="contacts__link" href="https://github.com/AlexLadv" target="_blank">AlexLadv</a>
+              </li>
+              <li class="contacts__item contacts__item--dis">Discord: AlexL#8665</li>
+            </ul>
+          </section>
+          <section class="section skills" id="skills">
+            <h2 class="skills__title title">Skills</h2>
+            <ul class="skills__list list-reset">
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">CSS (SASS/SCSS, BEM)</li>
+              <li class="skills__item">JavaScript (Basic)</li>
+              <li class="skills__item">Git/GitHub</li>
+              <li class="skills__item">VS Code, Figma</li>
+            </ul>
+          </section>
+        </div>
+        <div class="grid-container">
+          <section class="section courses" id="courses">
+            <h2 class="courses__title title">Education and courses</h2>
+            <ul class="courses__list list-reset">
+              <li class="courses__item">JS, CSS, HTML, Git video courses on YouTube channel</li>
+              <li class="courses__item">JavaScript 
+                <a class="courses__link" href="https://learn.javascript.ru" target="_blank">learn.javascript.ru</a>
+              </li>
+            </ul>
+          </section>
+          <section class="section language" id="language">
+            <h2 class="language__title title">Language</h2>
+            <p class="language__text">English level - A2</p>
+          </section>        
+        </div>  
+        <div class="container--big">
+          <section class="section section__code" id="code">
+            <h2 class="courses__title title">Code Example</h2>
+            <pre class="pre">
+              <code class="code">
+                function sum(a, b) { <br>
+                  return a + b; <br>
+                } <br>                         
+                let result = sum(1, 2); <br>
+                alert(result);
+              </code>
+            </pre>
+          </section>           
+        </div>   
+        <div class="container--big">   
+          <section class="section projects">
+            <h2 class="courses__title title">My projects</h2>
+            <p class="projects__text">There are no projects yet, but they will be added as they become available ...)))</p>
+          </section>          
+        </div>   
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container footer__container">
+        <p class="footer__copy">© 2022 by Alex Ladv</p>
+        <ul class="footer__list list-reset">
+          <li class="footer__item">
+            <a class="footer__link-gh link-anim" href="https://github.com/AlexLadv" target="_blank">My GitHub</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="https://rs.school/" target="_blank">
+              <img class="footer__logo-rs" src="./assets/svg/rsschool-logo.svg" alt="Logo RS School" width="80" height="29">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
