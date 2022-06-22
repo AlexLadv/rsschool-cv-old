@@ -621,6 +621,26 @@ a {
   height: 800px;
   margin: 0;
 }
+.swiper-img-descr {
+  position: relative;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 42px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.swiper-img-descr-japan {
+  bottom: 86px;
+  left: -330px;
+}
+.swiper-img-descr-spain {
+  bottom: 86px;
+  left: -330px;
+}
+.swiper-img-descr-usa {
+  bottom: 86px;
+  left: -351px;
+}
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
