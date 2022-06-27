@@ -606,8 +606,8 @@ a {
   width: 1440px;
   height: 860px;
   margin-bottom: 23px;
-  pointer-events: none;
-  cursor: default;
+  /* pointer-events: none;
+  cursor: default; */
 }
 .swiper-slide {
   width: 800px;
@@ -646,5 +646,27 @@ a {
 }
 .swiper-pagination-bullet-active {
   background-color: rgba(242, 120, 92, 0.5);
+}
+
+.swiper-button-prev {
+  left: 0px;
+  right: 10px;
+  top: 21px;
+  /* background-color: transparent; */
+  width: 260px;
+  height: 100%;
+}
+.swiper-button-prev::after {
+  content: "";
+}
+.swiper-button-next {
+  right: 0px;
+  top: 21px;
+  /* background-color: transparent; */
+  width: 260px;
+  height: 800px;
+}
+.swiper-button-next::after {
+  content: "";
 }
 /* ------- Slider styles end -------- */
